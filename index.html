@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <base href="/Media-Ready/">
+  <!-- <base href="/DevLens/"> -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Media Ready</title>
+  <title>DevLens</title>
 
   <style>
     * {
@@ -51,7 +51,18 @@
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
+      /* Firefox */
+      scrollbar-width: none;
+
+      /* IE and Legacy Edge */
+      -ms-overflow-style: none;
     }
+
+    /* Chrome, Safari, Opera, and modern Edge */
+    .carousel-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
 
     .carousel {
       display: flex;
@@ -60,11 +71,10 @@
     }
 
     .carousel img {
-      width: 260px;
-      border-radius: 28px;
+      width: 480px;
+      border-radius: 12px;
       flex-shrink: 0;
       scroll-snap-align: center;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
 
     .features {
@@ -128,38 +138,148 @@
   <div class="container">
 
     <section class="hero">
-      <h1>
-      <img src="./assets/appIcon.png" width="48" alt=""> Media Ready
-      </h1>
+      <div
+        style="display: flex;flex-direction: row;gap: 1rem;justify-content: center;align-items: center; margin: 16px;">
+        <div style="display: flex;justify-content: center;align-items: center; width:48px;height: 48px;">
+          <img src="./assets/icon.png" style="width: 100%;height: 100%; " alt="">
+        </div>
+        <p style="font-size: 48px;line-height: 2rem;font-weight: 700; ">DevLens</p>
+      </div>
+      <h2>Build pixel-perfect UIs from any screenshot.</h2>
+
       <p>
-        <span style="font-weight: 800;">MediaReady (iOS) makes photos and videos easier to share.</span>
-        <br/><br/>
-        Before sending, quickly:
-        <br/>
-        1. Convert HEIC to JPEG or PNG <br/>
-        2. Remove metadata <br/>
-        3. Zip multiple files into a single archive <br/><br/>
+        Whether you're implementing an AI-generated mockup, a client-provided PNG, an App Store screenshot, or a
+        beautiful UI you found online, DevLens helps you inspect and measure exactly what you see.
+      </p>
 
-        Built directly into the iOS share sheet for a fast, lightweight workflow. <br/>
+      <p>
+        Design files aren't always available. And even when they are, measurements from design tools don't always
+        translate perfectly to iOS and macOS. DevLens gives you a fast, visual workflow to inspect the final rendered
+        result instead.
+      </p>
 
-        No accounts. No cloud uploads. No complicated options. <br/><br/>
+      <br /><br />
 
-        <span style="font-weight: 800;">Just prepare and share.</span>
+      <h2>Built for real development workflows</h2>
 
+      <h3>AI-generated mockups</h3>
+
+      <p>
+        AI can generate beautiful UI concepts, but they're often delivered as images. When your client expects a
+        pixel-perfect implementation, DevLens lets you inspect every detail without guessing.
+      </p>
+
+      <h3>Client screenshots</h3>
+
+      <p>
+        Many clients send PNGs instead of design files. No layers. No measurements. No typography information. Just an
+        image.
+      </p>
+
+      <p>
+        DevLens turns that screenshot into a reference you can actually work with.
+      </p>
+
+      <h3>Reverse engineer great interfaces</h3>
+
+      <p>
+        Found an interface you love? Inspect its spacing, colors, and layout to better understand how it's put together.
+      </p>
+
+      <h3>Verify designs</h3>
+
+      <p>
+        Measurements from design tools sometimes don't match what you see on the actual device. DevLens helps you
+        inspect the rendered result, making it easier to fine-tune your implementation.
+      </p>
+
+      <br /><br />
+
+      <h2>Measure with precision</h2>
+
+      <p>Stop estimating.</p>
+
+      <p>- Measure any distance with a simple ruler</p>
+      <p>- Check spacing and padding visually</p>
+      <p>- Match corner radius with adjustable overlays</p>
+      <p>- Pick colors instantly</p>
+      <p>- Zoom in for pixel-level inspection</p>
+
+      <p>
+        Everything is measured directly from the image, giving you reliable pixel measurements without unnecessary
+        complexity.
+      </p>
+
+      <br /><br />
+
+      <h2>Extract text instantly</h2>
+
+      <p>No more retyping UI copy.</p>
+
+      <p>
+        Select text directly from screenshots and copy it to your clipboard, ready to paste into your project.
+      </p>
+
+      <p>Perfect for:</p>
+
+      <p>- Button titles</p>
+      <p>- Labels</p>
+      <p>- Error messages</p>
+      <p>- Marketing copy</p>
+      <p>- UI strings</p>
+
+      <br /><br />
+
+      <h2>Keep references where you need them</h2>
+
+      <p>
+        Every screenshot opens in its own lightweight floating window.
+      </p>
+
+      <p>
+        Pin screenshots above your workspace, arrange multiple references side by side, and keep them visible while you
+        code.
+      </p>
+
+      <p>
+        No constantly switching between Preview, Finder, or browser tabs.
+      </p>
+
+      <br /><br />
+
+      <h2>Designed for developers</h2>
+
+      <p>
+        DevLens focuses on the information engineers actually need:
+      </p>
+
+      <p>- Pixel measurements</p>
+      <p>- Spacing and padding</p>
+      <p>- Corner radius</p>
+      <p>- Color values</p>
+      <p>- Text extraction</p>
+      <p>- Always-on-top reference windows</p>
+
+      <br /><br />
+
+      <p style="font-weight: 700;">
+        No clutter. No unnecessary editing tools. Just the fastest way to inspect screenshots and build interfaces with
+        confidence.
       </p>
     </section>
 
     <section class="carousel-wrapper">
       <div class="carousel">
-        <img src="./assets/2.jpg" alt="Media Ready 1">
-        <img src="./assets/4.jpg" alt="Media Ready 2">
-        <img src="./assets/6.jpg" alt="Media Ready 3">
-        <img src="./assets/8.jpg" alt="Media Ready 4">
+        <img src="./assets/5.jpg" alt=" 1">
+        <img src="./assets/1.jpg" alt=" 2">
+        <img src="./assets/2.jpg" alt=" 3">
+        <img src="./assets/3.jpg" alt=" 4">
+        <img src="./assets/4.jpg" alt=" 4">
       </div>
     </section>
 
-        <section class="download">
-      <a href="https://apps.apple.com/us/app/id6769626855" target="_blank">
+    <section class="download">
+      <a href="https://apps.apple.com/us/app/id6786170387" target="_blank">
         Download on the App Store
       </a>
     </section>
